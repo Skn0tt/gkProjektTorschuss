@@ -10,10 +10,10 @@ public class Tor {
     private GLQuader right;
     private GLQuader back;
 
-    private double dicke = 10;
-    private double tiefe = 100;
-    private double hoehe = 400;
-    private double breite = 1000;
+    static double dicke = 10;
+    static double tiefe = 100;
+    static double hoehe = 400;
+    static double breite = 1000;
 
     private GLVektor position;
 
