@@ -26,6 +26,9 @@ public class Main {
 
         tor = new Tor(new GLVektor(0,0,2000));
 
+        GLQuader torwart = new GLQuader(0,100,2000, 80, 200, 80);
+        torwart.setzeFarbe(0,0,0);
+
         wand = new GLQuader(0,200,2100,7700,5000,20, "Bilder/Wand.png");
 
         kamera.setzeBlickpunkt(ball.gibX(), ball.gibY(), ball.gibZ() + 1000);
