@@ -1,9 +1,6 @@
 import GLOOP.GLQuader;
 import GLOOP.GLVektor;
 
-/**
- * Created by skn0tt on 21.06.17.
- */
 public class Tor {
     private GLQuader up;
     private GLQuader left;

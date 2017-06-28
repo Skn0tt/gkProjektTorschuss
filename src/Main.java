@@ -1,6 +1,3 @@
-/**
- * Created by skn0tt on 21.06.17.
- */
 import GLOOP.*;
 
 public class Main {
@@ -12,7 +9,7 @@ public class Main {
     private static GLQuader wand;
 
     private static double tilt;
-    private static double torwartPosX = 0;
+    private static double torwartBreite = 80;
 
     public static void main(String[] args){
         kamera = new GLKamera(500, 500);
@@ -26,7 +23,7 @@ public class Main {
 
         tor = new Tor(new GLVektor(0,0,2000));
 
-        GLQuader torwart = new GLQuader(0,100,2000, 80, 200, 80);
+        GLQuader torwart = new GLQuader(0,100,2000, torwartBreite, 200, 80);
         torwart.setzeFarbe(0,0,0);
 
         wand = new GLQuader(0,200,2100,7700,5000,20, "Bilder/Wand.png");
@@ -74,7 +71,8 @@ public class Main {
             Sys.warte(1);
         }
 
-        if (tor.beinhaltet(ball.gibPosition())) System.out.println("Getroffen!");
+        if (ball.gibPosition().x > -40 && ball.gibPosition().x < torwartBreite / 2) System.out.println("Gehalten!");
+        else if (tor.beinhaltet(ball.gibPosition())) System.out.println("Getroffen!");
         else System.out.println("Daneben!");
 
         ball.setzePosition(0,10,0);
